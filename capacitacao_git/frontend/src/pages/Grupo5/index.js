@@ -66,7 +66,10 @@ export default function Grupo5(){
         <button onClick={()=>{multiplicar(num1,num2)}}>Multiplicar</button>
         <button onClick={()=>{dividir(num1,num2)}}>Dividir</button>
         <hr></hr>
-   <h1 style={style}>Resultado:{res}</h1>
+        <div>
+        <span >Resultado: </span>
+        <span style={style}>{res}</span>
+        </div>
    <img src='https://cdn.dicionariopopular.com/imagens/nazareconfusamatematica.gif'/>
     </div>
   );
