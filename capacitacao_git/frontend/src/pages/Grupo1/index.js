@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -22,10 +22,37 @@ Regras da dinâmica:
 */
 
 export default function Grupo1(){
-
+  const [Value1, setValue1] = useState(0);
+  const [Value2, setValue2] = useState(0);
+  const [Resultado, setResultado] = useState(0);
   return (
     <div>
         <h1>Grupo 1</h1>
+        <input onChange = {e => setValue1(e.target.value)} type = 'text' id = "txt1"></input>
+        <input onChange = {e => setValue2(e.target.value)} type = 'text' id = "txt2"></input>
+        <button id ='soma' onClick = {()=>soma(Value1,Value2)}>Somar</button>
+        <button id ='subtração' onClick = {()=>subtração(Value1,Value2)} >Subtração</button>
+        <button id ='mutiplicação' onClick = {()=>multiplicação(Value1,Value2)}>Mutiplicação</button>
+        <button id ='divisão' onClick = {()=>divisão(Value1,Value2)}>Divisão</button>
+        <p id ="res">Resultado</p>
     </div>
+
+    
   );
+}
+function soma(Value1,Value2){
+  Value1.parseInt()
+  console.log("clicou")
+}
+function subtração(Value1,Value2){
+
+  console.log("clicou")
+}
+function multiplicação(Value1,Value2){
+
+  console.log("clicou")
+}
+function divisão(Value1,Value2){
+
+  console.log("clicou")
 }
