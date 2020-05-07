@@ -1,6 +1,7 @@
-import React from 'react';
-import './styles.css';
-
+import React, { useState } from "react";
+import "./styles.css";
+//import 'bootstrap/dist/css/bootstrap.min.css';
+//
 /*
 Passos e Orientações :
 - Uma vez copiado o diretório crie um branch para seu grupo e trabalhe sempre nele.
@@ -19,11 +20,55 @@ Regras da dinâmica:
 - Se quiser pode apagar esse comentário (depois de ler tudo é claro).
 */
 
-export default function Grupo4(){
+export default function Grupo4() {
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState(1);
+  const [resultado, setResultado] = useState("");
+
+  function handleNum1Change(event) {
+    let res = event.target.value;
+    res = parseFloat(res);
+    setNum1(res);
+  }
+  function handleNum2Change(event) {
+    let res = event.target.value;
+    res = parseFloat(res);
+    setNum2(res);
+  }
+
+  function soma() {setResultado(num1+num2);}
+  function subtracao() {setResultado(num1-num2);}
+  function multiplicacao() {setResultado(num1*num2);}
+  function divisao() {setResultado(num1/num2);}
+
+  function chooseStyle() {
+    let style = {fontSize:300};
+    if(resultado > 0) 
+      style.color = "green";
+    else if(resultado == 0)
+      style.color = "grey";
+    else
+      style.color = "red";
+    return style;
+  }
 
   return (
-    <div>
-        <h1>Grupo 4</h1>
+    <div className="d-flex flex-column align-items-center justify-content-center main-container">
+      <h1 className="m-5">Grupo 4</h1>
+      <div className="m-3">
+        <input className="mx-3 text-center"type="number" value={num1} onChange={handleNum1Change}></input>
+        <input className="mx-3 text-center" type="number" value={num2} onChange={handleNum2Change}></input>
+      </div>
+      <div className="m-3">
+        <button className="btn btn-primary mx-3" onClick={soma}>Soma</button>
+        <button className="btn btn-success mx-3" onClick={subtracao}>Subtração</button>
+        <button className="btn btn-danger mx-3" onClick={multiplicacao}>Multiplicação</button>
+        <button className="btn btn-warning mx-3" onClick={divisao}>Divisão</button>
+      </div>
+      <div className="m-3">
+        <h1 className="text-center">Resultado:</h1>
+        <h1 className="text-center" style={chooseStyle()}>{resultado}</h1>
+      </div>
     </div>
   );
 }
