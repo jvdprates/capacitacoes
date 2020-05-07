@@ -25,6 +25,15 @@ export default function Grupo5(){
   const [num2, setNum2]=useState(0)
 
   const [res, setRes]=useState(0)
+  const style={}
+
+  if(res<0){
+    style.color= 'red';
+  }else if(res === 0){
+    style.color= 'white';
+  }else{
+    style.color= 'green';
+  }
 
   console.log(num1)
   console.log(num2)
@@ -57,7 +66,7 @@ export default function Grupo5(){
         <button onClick={()=>{multiplicar(num1,num2)}}>Multiplicar</button>
         <button onClick={()=>{dividir(num1,num2)}}>Dividir</button>
         <hr></hr>
-   <h1>Resultado:{res}</h1>
+   <h1 style={style}>Resultado:{res}</h1>
    <img src='https://cdn.dicionariopopular.com/imagens/nazareconfusamatematica.gif'/>
     </div>
   );
