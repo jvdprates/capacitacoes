@@ -52,38 +52,38 @@ export default function Example() {
   }
 
   return (
-    <div className="fullContainer">
+    <div className="e_fullContainer">
       <div className="d-flex justify-content-center">
-        <h1 className="mainTitle">Página de exemplos simples</h1>
+        <h1 className="e_mainTitle">Página de exemplos simples</h1>
       </div>
-      <div className="centralBox align-itens-center">
+      <div className="e_centralBox align-itens-center">
         <div className="container">
-          <div className="d-flex justify-content-center spacedRow">
-            <h3 className="regularText">Este botão conta clicks -></h3>
+          <div className="d-flex justify-content-center e_spacedRow">
+            <h3 className="e_regularText">Este botão conta clicks -></h3>
             <Button onClick={() => { handleClickCount() }} variant="success">{numclick}</Button>
           </div>
           <div className="d-flex justify-content-center">
-            <h3 className="regularText">Manipule este numero -> | {number} |</h3>
-            <Button className="spacedCol" onClick={() => { handleSubtract() }} variant="success">-1</Button>
-            <Button className="spacedCol" onClick={() => { handleSum() }} variant="primary">+1</Button>
-            <Button className="spacedCol" onClick={() => { handleMult2() }} variant="success">*2</Button>
-            <Button className="spacedCol" onClick={() => { handle0() }} variant="info">=0</Button>
+            <h3 className="e_regularText">Manipule este numero -> | {number} |</h3>
+            <Button className="e_spacedCol" onClick={() => { handleSubtract() }} variant="success">-1</Button>
+            <Button className="e_spacedCol" onClick={() => { handleSum() }} variant="primary">+1</Button>
+            <Button className="e_spacedCol" onClick={() => { handleMult2() }} variant="success">*2</Button>
+            <Button className="e_spacedCol" onClick={() => { handle0() }} variant="info">=0</Button>
           </div>
           <div className="d-flex justify-content-center">
-            <h3 className="regularText">Manipule caixinhas!</h3>
+            <h3 className="e_regularText">Manipule caixinhas!</h3>
             <div className="d-flex flex-wrap">
               {
                 boxvec.map((value) => {
                   return (
-                    <div className="smallBox">{value}</div>
+                    <div className="e_smallBox">{value}</div>
                   )
                 })
               }
             </div>
           </div>
           <div className="d-flex justify-content-center">
-            <Button className="spacedCol" variant="info" onClick={() => { handleAddBox() }}>Adicionar caixinha</Button>
-            <Button className="spacedCol" variant="info" onClick={() => { handleRemoveBox() }}>Remover caixinha</Button>
+            <Button className="e_spacedCol" variant="info" onClick={() => { handleAddBox() }}>Adicionar caixinha</Button>
+            <Button className="e_spacedCol" variant="info" onClick={() => { handleRemoveBox() }}>Remover caixinha</Button>
           </div>
         </div>
       </div>
