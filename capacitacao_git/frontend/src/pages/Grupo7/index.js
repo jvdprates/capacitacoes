@@ -20,10 +20,42 @@ Regras da dinâmica:
 */
 
 export default function Grupo7(){
-
+  const resultado = 0;
+  function numSoma() {
+    console.log (`Soma`);
+    resultado = `Soma`;
+  }
+  function numSub() {
+    console.log (`Subtração`);
+  }
+  function numMult() {
+    console.log (`Multiplicação`);
+  }
+  function numDiv() {
+    console.log (`Divisão`);
+  }
+  function handleChange1(){
+    console.log (`Teste1`);
+  }
+  function handleChange2(){
+    console.log (`Teste2`);
+  }
   return (
     <div>
         <h1>Grupo 7</h1>
+        <div>
+          <button onClick={() => { numSoma() }}>Soma</button>
+          <button onClick={() => { numSub() }}>Subtração</button>
+          <button onClick={() => { numMult() }}>Multiplicação</button>
+          <button onClick={() => { numDiv() }}>Divisão</button>
+        </div>
+        <div>
+          <input type="text" />
+          <input type="text" />
+        </div>
+        <div>
+          <p>{resultado}</p>
+        </div>
     </div>
   );
 }
