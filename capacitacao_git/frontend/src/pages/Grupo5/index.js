@@ -54,6 +54,10 @@ export default function Grupo5(){
   function dividir(num1, num2){
     setRes((num1/num2).toFixed(2))
   }
+
+  function exponencial(num1, num2){
+    setRes(Math.pow(num1,num2))
+  }
   //parseInt(e.target.value)
   return (
     <div style={{textAlign:"center"}}>
@@ -65,6 +69,7 @@ export default function Grupo5(){
         <button onClick={()=>{subtrair(num1,num2)}}>Subtrair</button>
         <button onClick={()=>{multiplicar(num1,num2)}}>Multiplicar</button>
         <button onClick={()=>{dividir(num1,num2)}}>Dividir</button>
+        <button onClick={()=>{exponencial(num1,num2)}}>Exponenciação</button>
         <hr></hr>
         <div>
         <span >Resultado: </span>
