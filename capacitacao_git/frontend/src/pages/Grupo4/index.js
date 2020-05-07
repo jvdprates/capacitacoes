@@ -45,7 +45,7 @@ export default function Grupo4() {
     let style = {fontSize:300};
     if(resultado > 0) 
       style.color = "green";
-    else if(resultado == 0)
+    else if(resultado === 0)
       style.color = "grey";
     else
       style.color = "red";
