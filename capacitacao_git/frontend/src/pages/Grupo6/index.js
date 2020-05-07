@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './styles.css';
 
 /*
@@ -21,9 +21,36 @@ Regras da dinâmica:
 
 export default function Grupo6(){
 
+  const [number, setNumber] = useState(0);
+  const [number2, setNumber2] = useState(0);
+  const [result, setResult] = useState(0);
+
+  function divisao()
+  {
+    setResult(number/number2);
+  }
+  function soma()
+  {
+    setResult(number+number2);
+  }
+  function multiplicacao()
+  {
+    setResult(number*number2);
+  }
+  function subtracao()
+  {
+    setResult(number-number2);
+  }
+
   return (
-    <div>
-        <h1>Grupo 6</h1>
+    <div className="d-flex justify-content-center align-items-center">
+        <input type="text" onChange={e => setNumber(parseFloat(e.target.value))}></input>
+        <input type="text" onChange={e => setNumber2(parseFloat(e.target.value))}></input>
+        <button onClick={() => {divisao()}}>divisão</button>
+        <button onClick={() => {soma()}}>soma</button>
+        <button onClick={() => {multiplicacao()}}>multiplicação</button>
+        <button onClick={() => {subtracao()}}>subtração</button>
+        <h1>RESULTADO: {result}</h1>
     </div>
   );
 }
