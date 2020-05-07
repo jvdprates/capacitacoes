@@ -89,33 +89,33 @@ export default function Example() {
             </div>
           </div>
           <div className="d-flex justify-content-center e_spacedRow">
-            <Button className="e_spacedCol" variant="info" onClick={() => { handleAddBox() }}>Adicionar caixinha</Button>
-            <Button className="e_spacedCol" variant="info" onClick={() => { handleRemoveBox() }}>Remover caixinha</Button>
+            <Button className="e_spacedCol e_spacedRow" variant="info" onClick={() => { handleAddBox() }}>Adicionar caixinha</Button>
+            <Button className="e_spacedCol e_spacedRow" variant="info" onClick={() => { handleRemoveBox() }}>Remover caixinha</Button>
           </div>
           <div className="d-flex justify-content-center e_spacedRow">
             <h3 className="e_regularText">Links para as páginas dos grupos!</h3>
           </div>
-          <div className="d-flex justify-content-center e_spacedRow">
+          <div className="d-flex flex-wrap justify-content-center e_spacedRow">
             <Link to='/grupo1'>
-              <Button className="e_spacedCol" variant="success">Grupo1</Button>
+              <Button className="e_spacedCol e_spacedRow" variant="success">Grupo1</Button>
             </Link>
             <Link to='/grupo2'>
-              <Button className="e_spacedCol" variant="success">Grupo2</Button>
+              <Button className="e_spacedCol e_spacedRow" variant="success">Grupo2</Button>
             </Link>
             <Link to='/grupo3'>
-              <Button className="e_spacedCol" variant="success">Grupo3</Button>
+              <Button className="e_spacedCol e_spacedRow" variant="success">Grupo3</Button>
             </Link>
             <Link to='/grupo4'>
-              <Button className="e_spacedCol" variant="success">Grupo4</Button>
+              <Button className="e_spacedCol e_spacedRow" variant="success">Grupo4</Button>
             </Link>
             <Link to='/grupo5'>
-              <Button className="e_spacedCol" variant="success">Grupo5</Button>
+              <Button className="e_spacedCol e_spacedRow" variant="success">Grupo5</Button>
             </Link>
             <Link to='/grupo6'>
-              <Button className="e_spacedCol" variant="success">Grupo6</Button>
+              <Button className="e_spacedCol e_spacedRow" variant="success">Grupo6</Button>
             </Link>
             <Link to='/grupo7'>
-              <Button className="e_spacedCol" variant="success">Grupo7</Button>
+              <Button className="e_spacedCol e_spacedRow" variant="success">Grupo7</Button>
             </Link>
           </div>
         </div>
