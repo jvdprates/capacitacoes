@@ -1,6 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Button, InputGroup, FormControl } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import './styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
