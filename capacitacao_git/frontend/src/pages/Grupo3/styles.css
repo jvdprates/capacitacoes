@@ -1,0 +1,43 @@
+.calculadora{
+    height: 320px;
+    width: 650px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: rgb(5, 3, 90);
+    display: flex; 
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+.input{
+    width: 100px;
+}
+
+.button{
+    margin-left: 550px;
+}
+
+.mais{
+    padding-right: 13px;
+}
+
+.diff{
+    padding-right: 11px;
+}
+
+.vezes{
+    padding-right: 16px;
+}
+.reset{
+    padding-right: 11px;
+}
+
+
+.resultado{
+    color: lemonchiffon;
+    margin-top: auto;
+    margin-left: 6px;
+    height: auto;
+    width: fit-content;
+    background-color: rgb(5, 3, 90);
+}
