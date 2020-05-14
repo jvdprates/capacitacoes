@@ -1,5 +1,6 @@
-import React from 'react';
-import './styles.css';
+import React, { useState } from "react";
+import "./styles.css";
+import ComponenteNoIdiomaSelecionado from "./comp_ing.jsx";
 
 /*
 Passos e Orientações :
@@ -19,11 +20,30 @@ Regras da dinâmica:
 - Se quiser pode apagar esse comentário (depois de ler tudo é claro).
 */
 
-export default function Grupo5(){
+export default function Grupo5() {
+    const [idioma, setIdioma] = useState(0);
 
-  return (
-    <div>
-        <h1>Grupo 5</h1>
-    </div>
-  );
+    const linkImage = [{
+        link: "https://img.elo7.com.br/product/zoom/1CECE56/quadro-decorativo-bandeira-do-brasil-paises-com-moldura-001-quadro-com-moldura.jpg"
+    },{
+        link: "http://cebesa.net/wp-content/uploads/2019/04/bandeira-eua-toeic.jpg"
+    }]
+
+    return (
+        <>
+            <div className="selectLanguage" style={{ textAlign: "left" }}>
+                <img className="bandeira" src={`${linkImage[idioma].link}`} ></img> 
+                <select
+                    name="selectLanguage"
+                    className="select"
+                    onChange={(e) => setIdioma(e.target.value)}
+                >
+                    <option value={0}> Português </option>
+                    <option value={1}> Inglês </option>
+                </select>
+            </div>
+            <ComponenteNoIdiomaSelecionado language={idioma}/>
+        </>
+    );
+  
 }

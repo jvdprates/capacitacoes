@@ -19,6 +19,7 @@ Regras da dinâmica:
 - Se quiser pode apagar esse comentário (depois de ler tudo é claro).
 */
 
+
 export default function Grupo7(){
 
   return (
@@ -27,3 +28,5 @@ export default function Grupo7(){
     </div>
   );
 }
+
+
