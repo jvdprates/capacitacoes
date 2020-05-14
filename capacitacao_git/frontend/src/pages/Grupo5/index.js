@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import './styles.css';
+import React, { useState } from "react";
+import "./styles.css";
+import ComponenteNoIdiomaSelecionado from "./comp_ing.jsx";
 
 /*
 Passos e Orientações :
@@ -19,70 +20,30 @@ Regras da dinâmica:
 - Se quiser pode apagar esse comentário (depois de ler tudo é claro).
 */
 
-export default function Grupo5(){
+export default function Grupo5() {
+    const [idioma, setIdioma] = useState(0);
 
-  const [num1, setNum1]=useState(0)
-  const [num2, setNum2]=useState(0)
+    const linkImage = [{
+        link: "https://img.elo7.com.br/product/zoom/1CECE56/quadro-decorativo-bandeira-do-brasil-paises-com-moldura-001-quadro-com-moldura.jpg"
+    },{
+        link: "http://cebesa.net/wp-content/uploads/2019/04/bandeira-eua-toeic.jpg"
+    }]
 
-  const [res, setRes]=useState(0)
-  const style={}
-
-  if(res<0){
-    style.color= 'red';
-  }else if(res === 0){
-    style.color= 'white';
-  }else{
-    style.color= 'green';
-  }
-
-  console.log(num1)
-  console.log(num2)
-
-  function somar(num1, num2){
-    setRes(num1+num2)
-  }
+    return (
+        <>
+            <div className="selectLanguage" style={{ textAlign: "left" }}>
+                <img className="bandeira" src={`${linkImage[idioma].link}`} ></img> 
+                <select
+                    name="selectLanguage"
+                    className="select"
+                    onChange={(e) => setIdioma(e.target.value)}
+                >
+                    <option value={0}> Português </option>
+                    <option value={1}> Inglês </option>
+                </select>
+            </div>
+            <ComponenteNoIdiomaSelecionado language={idioma}/>
+        </>
+    );
   
-  function subtrair(num1, num2){
-    setRes(num1-num2)
-  }
-
-  
-  function multiplicar(num1, num2){
-    setRes(num1*num2)
-  }
-  
-  function dividir(num1, num2){
-    setRes((num1/num2).toFixed(2))
-  }
-
-  function exponencial(num1, num2){
-    setRes(Math.pow(num1,num2))
-  }
-  //parseInt(e.target.value)
-  return (
-    <div style={{textAlign:"center"}}>
-       <h1>Calculadora Grupo 5</h1>
-        <input type='text' placeholder='Número 1' onChange={(e)=>{setNum1(parseInt(e.target.value,10))}}/><br></br>
-        <input type="text" placeholder='Número 2' onChange={(e)=>{setNum2(parseInt(e.target.value,10))}}/><br></br>
-          <br></br>
-        <button onClick={()=>{somar(num1,num2)}}>Somar</button>
-        <button onClick={()=>{subtrair(num1,num2)}}>Subtrair</button>
-        <button onClick={()=>{multiplicar(num1,num2)}}>Multiplicar</button>
-        <button onClick={()=>{dividir(num1,num2)}}>Dividir</button>
-        <button onClick={()=>{exponencial(num1,num2)}}>Exponenciação</button>
-        <hr></hr>
-        <div>
-        <span >Resultado: </span>
-        <span style={style}>{res}</span>
-        </div>
-   <img src='https://cdn.dicionariopopular.com/imagens/nazareconfusamatematica.gif'/>
-    </div>
-  );
 }
-
-/* function calculadora(){
-
-  return(){
-    
-  }
-} */

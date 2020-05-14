@@ -15,6 +15,21 @@ button{
 img{
     margin: 10px;
 }
+
+.selectLanguage{
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bandeira{
+    width: 40px;
+    height: 25px;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
 span{
     font-size: 50px;
     font-weight: bold;
